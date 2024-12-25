@@ -45,7 +45,8 @@ export const generatePagination = (currentPage: number, totalPages: number) => {
   // If the current page is among the first 3 pages,
   // show the first 3, an ellipsis, and the last 2 pages.
   if (currentPage <= 3) {
-    return [1, 2, 3, '...', totalPages - 1, totalPages];
+    console.log('currentPage', currentPage, "totalPages", totalPages);
+    return [1, 2, 3, '...', Number(totalPages) - 1, totalPages];
   }
 
   // If the current page is among the last 3 pages,
